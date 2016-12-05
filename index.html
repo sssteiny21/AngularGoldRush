@@ -17,7 +17,7 @@
       <div class="col-xs-12" ng-click="yCtrl.position($event)">
         <img class="map" src="https://raw.githubusercontent.com/RefactorU/exercise-starters-web/master/week3/gold-rush/starter-code/topo-co.jpg?token=AQJUvGyba6t0wlWAHcyui2SSdhnC-Gfhks5YTuAvwA%3D%3D">
         <div ng-repeat="spot in yCtrl.goldspots">
-         <img class="goldspots" style="top:{{spot.y}}px;left:{{spot.x}}px;" src="http://dayz.wiki/images/thumb/b/b7/Pickaxe.png/299px-Pickaxe.png">
+         <img ng-click="yCtrl.removeIt($event, $index)" class="goldspots" style="top:{{spot.y}}px;left:{{spot.x}}px;" src="http://dayz.wiki/images/thumb/b/b7/Pickaxe.png/299px-Pickaxe.png">
         </div>
       </div> 
     </div>
