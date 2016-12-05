@@ -1,0 +1,27 @@
+<<!DOCTYPE html>
+<html ng-app="foundGold" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular GoldRushExercise</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+   <link rel="stylesheet" href="main.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+   <script src="main.js"></script>
+</head>
+<body ng-controller="gold as yCtrl" >
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 header text-center"><h1>Find Yer Gold</h1></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12" ng-click="yCtrl.position($event)">
+        <img class="map" src="https://raw.githubusercontent.com/RefactorU/exercise-starters-web/master/week3/gold-rush/starter-code/topo-co.jpg?token=AQJUvGyba6t0wlWAHcyui2SSdhnC-Gfhks5YTuAvwA%3D%3D">
+        <div ng-repeat="spot in yCtrl.goldspots">
+         <img class="goldspots" style="top:{{spot.y}}px;left:{{spot.x}}px;" src="http://dayz.wiki/images/thumb/b/b7/Pickaxe.png/299px-Pickaxe.png">
+        </div>
+      </div> 
+    </div>
+  </div>
+  
+</body>
+</html>
